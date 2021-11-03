@@ -83,7 +83,7 @@ elif [[ ${mode} =~ ^harvester.* ]]; then
       flora init --fix-ssl-permissions > /dev/null 
     else
       echo "Did not find your farmer's certificates within /root/.flora/farmer_ca."
-      echo "See: https://github.com/guydavis/machinaris/wiki/Workers#harvester"
+      echo "See: https://github.com/raingggg/coctohug/wiki"
     fi
     flora configure --set-farmer-peer ${farmer_address}:${farmer_port}
     flora configure --enable-upnp false

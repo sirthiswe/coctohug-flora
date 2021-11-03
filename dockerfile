@@ -7,7 +7,7 @@ COPY . /coctohug/
 # set workdir
 WORKDIR /chia-blockchain
 
-# Install Chia (and forks), Plotman, Chiadog, Machinaris, etc
+# Install Chia (and forks), Plotman, Chiadog, Coctohug, etc
 RUN \
 	/usr/bin/bash /coctohug/chain_install.sh ${FLORA_BRANCH} \
 	&& /usr/bin/bash /coctohug/coctohug_install.sh \
@@ -31,7 +31,7 @@ ENV farmer_port="18647"
 # Can override the location of default settings for api and web servers.
 ENV API_SETTINGS_FILE='/root/.chia/coctohug/config/api.cfg'
 ENV WEB_SETTINGS_FILE='/root/.chia/coctohug/config/web.cfg'
-# Local network hostname of a Machinaris controller - localhost when standalone
+# Local network hostname of a Coctohug controller - localhost when standalone
 ENV controller_host="localhost"
 ENV controller_web_port=8926
 ENV controller_api_port=8927
@@ -48,9 +48,9 @@ VOLUME [ "/id_rsa" ]
 EXPOSE 18644
 # blockchain farmer port - DO NOT forward at router
 EXPOSE 18647
-# Machinaris WebUI - DO NOT forward at router, proxy if needed
+# Coctohug WebUI - DO NOT forward at router, proxy if needed
 # EXPOSE 8926
-# Machinaris API - DO NOT forward at router
+# Coctohug API - DO NOT forward at router
 # EXPOSE 8927
 
 WORKDIR /chia-blockchain
