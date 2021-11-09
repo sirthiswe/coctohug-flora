@@ -1,6 +1,6 @@
 # the flora hand
 - flora specific docker
-- watchdog with worker mode
+- log parser
 
 # build
 - sudo docker build --no-cache --build-arg CODE_BRANCH=0.2.12 -t coctohug-flora:latest .
