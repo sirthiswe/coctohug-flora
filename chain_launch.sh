@@ -67,11 +67,11 @@ elif [[ ${mode} =~ ^harvester.* ]]; then
   else
     if [ ! -f /root/${CONFIG_PATH}/farmer_ca/${CERT_NAME}_ca.crt ]; then
       mkdir -p /root/${CONFIG_PATH}/farmer_ca
-      response=$(curl --write-out '%{http_code}' --silent http://${controller_host}:${controller_web_port}/certificates/?type=${blockchain} --output /tmp/certs.zip)
+      response=$(curl --write-out '%{http_code}' --silent http://${controller_address}:${controller_web_port}/certificates/?type=${blockchain} --output /tmp/certs.zip)
       if [ $response == '200' ]; then
         unzip /tmp/certs.zip -d /root/${CONFIG_PATH}/farmer_ca
       else
-        echo "Certificates response of ${response} from http://${controller_host}:${controller_web_port}/certificates/?type=${blockchain}.  Try clicking 'New Worker' button on 'Workers' page first."
+        echo "Certificates response of ${response} from http://${controller_address}:${controller_web_port}/certificates/?type=${blockchain}.  Try clicking 'New Worker' button on 'Workers' page first."
       fi
       rm -f /tmp/certs.zip 
     fi
