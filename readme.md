@@ -3,8 +3,8 @@
 - watchdog with worker mode
 
 # build
-- sudo docker build --no-cache --build-arg FLORA_BRANCH=main -t coctohug-flora:latest .
-- sudo docker build --build-arg FLORA_BRANCH=main -t coctohug-flora:latest .
+- sudo docker build --no-cache --build-arg CODE_BRANCH=0.2.12 -t coctohug-flora:latest .
+- sudo docker build --build-arg CODE_BRANCH=0.2.12 -t coctohug-flora:latest .
 
 # docker-compose
 - coctohug-flora: 
@@ -18,9 +18,12 @@
             - "/mnt/disk2:/plots2" 
         environment: 
             - mode=fullnode 
-            - worker_address=192.168.1.74 
+            - controller_address=192.168.1.74 
+            - controller_web_port=12530
+            - worker_address=192.168.1.74
+            - worker_web_port=12532
             - plots_dir=/plots1:/plots2 
-            - blockchains=flora 
+            - blockchain=flora 
         ports: 
             - 18644:18644 
             - 18647:18647

@@ -1,1 +1,1 @@
-echo 'flora web_launch working'
+echo '${blockchain} web_launch working'
