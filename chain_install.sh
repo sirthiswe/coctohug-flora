@@ -1,7 +1,7 @@
 #!/bin/env bash
 CODE_BRANCH=$1
 CODE_URL=https://github.com/Flora-Network/flora-blockchain.git
-CODE_FOLDER="/Users/qin/works/flora-blockchain"
+CODE_FOLDER="/flora-blockchain"
 BINARY_NAME="flora"
 
 if [ -z ${CODE_BRANCH} ]; then
