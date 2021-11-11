@@ -1,0 +1,7 @@
+{
+  "blockchain": "flora",
+  "binary": "/flora-blockchain/venv/bin/flora",
+  "mainnet": ".flora/mainnet",
+  "config": ".flora/mainnet/config/config.yaml",
+  "webLogLevel": "error"
+}

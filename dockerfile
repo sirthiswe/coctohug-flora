@@ -1,4 +1,4 @@
-FROM coctohug-body:latest
+FROM raingggg/coctohug-body:develop
 ARG CODE_BRANCH
 
 # copy local files
@@ -35,13 +35,15 @@ VOLUME [ "/id_rsa" ]
 
 # Local network hostname of a Coctohug controller - localhost when standalone
 ENV controller_address="localhost"
-ENV controller_web_port=12530
+ENV controller_web_port=12630
 
+ENV WEB_MODE="worker"
 ENV worker_address="localhost"
-ENV worker_web_port=12532
-EXPOSE 12531
+ENV worker_web_port=12632
+EXPOSE 12632
 
 # full name of blockchain
+ENV config_file="/coctohug/web/blockchain.json"
 ENV blockchain="flora"
 
 # blockchain protocol port - forward at router

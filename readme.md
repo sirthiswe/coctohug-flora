@@ -19,12 +19,10 @@
         environment: 
             - mode=fullnode 
             - controller_address=192.168.1.74 
-            - controller_web_port=12530
             - worker_address=192.168.1.74
-            - worker_web_port=12532
             - plots_dir=/plots1:/plots2 
-            - blockchain=flora 
         ports: 
+            - 12632:12632 
             - 18644:18644 
             - 18647:18647
 
