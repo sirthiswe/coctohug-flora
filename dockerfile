@@ -9,8 +9,12 @@ WORKDIR /chia-blockchain
 
 # Install Chia (and forks), Plotman, Chiadog, Coctohug, etc
 RUN \
-	/usr/bin/bash /coctohug/chain_install.sh ${CODE_BRANCH} \
-	&& /usr/bin/bash /coctohug/coctohug_install.sh \
+	/usr/bin/bash /coctohug/chain_install.sh ${CODE_BRANCH}
+
+WORKDIR /chia-blockchain
+
+RUN \
+	/usr/bin/bash /coctohug/coctohug_install.sh \
 	&& rm -rf \
 		/root/.cache \
 		/tmp/* \
