@@ -19,7 +19,7 @@ ln -s /root/.chia/${CHIA_FORK_FOLDER} /root/${CONFIG_PATH}
 mkdir -p /root/${CONFIG_PATH}/mainnet/log
 ${BINARY_NAME} init >> /root/${CONFIG_PATH}/mainnet/log/init.log 2>&1 
 
-echo 'Configuring ${BINARY_NAME}...'
+echo "Configuring ${BINARY_NAME}..."
 while [ ! -f /root/${CONFIG_PATH}/mainnet/config/config.yaml ]; do
   echo "Waiting for creation of /root/${CONFIG_PATH}/mainnet/config/config.yaml..."
   sleep 1
