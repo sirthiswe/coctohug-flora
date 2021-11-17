@@ -3,6 +3,7 @@
   "binary": "/flora-blockchain/venv/bin/flora",
   "mainnet": ".flora/mainnet",
   "config": ".flora/mainnet/config/config.yaml",
+  "chainlog": ".flora/mainnet/log/debug.log",
   "webLogLevel": "error",
   "webLogFile": ".flora/web.log",
   "watchDogLogLevel": "error",
